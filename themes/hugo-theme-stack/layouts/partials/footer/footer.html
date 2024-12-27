@@ -14,18 +14,27 @@
         {{ with .Site.Params.footer.customText }}
             {{ . | safeHTML }} <br>
         {{ end }}
-
-        &lt;--{{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
+        <!----{{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
         {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
         {{- $DesignedBy := `<a href="https://jimmycai.com/" target="_blank" rel="noopener">Jimmy</a>` -}}
 
         {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br>
-        {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }} --&gt;
+        {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }} -->
+
+        {{ $articleCount := len .Site.RegularPages }}
+        {{ $totalWordCount := 0 }}
+        {{ range .Site.Pages }}
+        {{ $totalWordCount = add $totalWordCount .WordCount }}
+        {{ end }}
+
+        <p>发布了 {{ $articleCount }} 篇文章 | 共 {{$totalWordCount}} 字</p>
+
+
 <!-- 加入这串 -->
-    <section class="powerby">
-           <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> theme <b><script defer="" src="./footer_files/client.min.js.下载"></script>
-<a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> <a>designed by Jimmy</a>
-    </section>
+<section class="powerby">
+    <a>总访客数: </a><span id='busuanzi_value_site_uv'>Loading</span> <a> | </a> <a>总访问量: </a><span id='busuanzi_value_site_pv'>Loading</span></br>
+    <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> <a>designed by Jimmy</a>
+</section>
 <!-- 结束 -->
     </section>
 </footer>
