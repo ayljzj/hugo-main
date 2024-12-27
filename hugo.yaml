@@ -259,4 +259,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-	style: github-dark
