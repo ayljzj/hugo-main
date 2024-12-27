@@ -1,0 +1,56 @@
+//为代码块顶部添加macos样式
+.article-content {
+    .highlight:before {
+      content: "";
+      display: block;
+      background: #fc625d;
+      border-radius: 50%;
+      box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+      height: 12px;
+      width: 12px;
+      margin-bottom: 5px;
+    }
+  }
+  
+  // 代码块基础样式修改
+  .highlight {
+    max-width: 102% !important;
+    background-color: var(--pre-background-color);
+    padding: var(--card-padding);
+    position: relative;
+    border-radius: 20px;
+    margin-left: -7px !important;
+    margin-right: -12px;
+    box-shadow: var(--shadow-l1) !important;
+  
+    &:hover {
+      .copyCodeButton {
+        opacity: 1;
+      }
+    }
+  
+    // keep Codeblocks LTR
+    [dir="rtl"] & {
+      direction: ltr;
+    }
+  
+    pre {
+      margin: initial;
+      padding: 0;
+      margin: 0;
+      width: auto;
+      // background-color: #282c34 !important;
+    }
+  }
+  
+  
+  // light模式下的代码块样式调整
+  [data-scheme="light"] .article-content .highlight {
+    background-color: #fff9f3;
+  }
+  
+  [data-scheme="light"] .chroma {
+    color: #ff6f00;
+    background-color: #fff9f3cc;
+  }
+  
