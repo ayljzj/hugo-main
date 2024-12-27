@@ -5,6 +5,7 @@ date: 2024-12-25
 categories:
   - Boombeach
   - 手游
+header-img: ./boom-beach.assets/1.png
 ---
 > “A Happy Game. ”
 ## 相关链接
@@ -35,13 +36,13 @@ categories:
 **想种沙滩树要先种压岸树**
 ### 1压岸树
 压岸树首先将基地左上角靠山的位置空出来，别的位置用建筑填上，建筑直接的间隔不要留有大于(包括)2×2的位置（防止长树），确保树往左上角长。<br>
-<img src="沙滩树1.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树1.png" width="50%" align="center" />
 ### 2砍部分树
 当树长的较多的时候，可以将靠近上方的树砍掉，然后用建筑堵住，防止长回去，将树生长的方向挤向岸边。<br>
-<img src="沙滩树2.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树2.png" width="50%" align="center" />
 
 ### 3挂脚本
 当岸边长满树的时候，或者长较多树的时候，可以尝试开始挂航母脚本，促进沙滩树的生长。<br>
-<img src="沙滩树3.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树3.png" width="50%" align="center" />
 
 
