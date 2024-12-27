@@ -5,7 +5,7 @@ subtitle: ' "git的部分操作指南"'
 date: 2024-12-27
 author: AYLj
 catalog: true
-tags:
+categories:
   - git
 ---
 
