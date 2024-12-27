@@ -1,12 +1,12 @@
 ---
-title: Chinese Test
+title: 中文文档
 description: 这是一个副标题
 date: 2020-09-09
 slug: test-chinese
 image: helena-hertz-wWZzXlDpMog-unsplash.jpg
 categories:
-    - Test
-    - 测试
+    - Boombeach
+    - 手游
 ---
 
 ## 正文测试

@@ -13,16 +13,9 @@ DefaultContentLanguage: zh-cn
 hasCJKLanguage: true
 
 languages:
-    en:
-        languageName: English
-        title: Example Site
-        weight: 1
-        params:
-            sidebar:
-                subtitle: Example description
     zh-cn:
         languageName: 简体中文
-        title: 个人博客
+        title: 暗影流金的博客
         weight: 2
         params:
             sidebar:
@@ -59,14 +52,14 @@ params:
 
     footer:
         since: 2024
-        customText: 开心
+        customText: 
 
     dateFormat:
         published: 2006-01-02
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
+        emoji: 
         subtitle: 欢迎来到我的位置
         avatar:
             enabled: true
@@ -79,7 +72,7 @@ params:
         readingTime: true
         license:
             enabled: false
-            default: Licensed under CC BY-NC-SA 4.0
+            default: Licensed under CC BY-NC-SA 4.0 #文章末尾显示
 
     comments: #评论
         enabled: false
@@ -165,7 +158,7 @@ params:
         cusdis:
             host:
             id:
-    widgets: #侧边栏
+    widgets: #侧边栏 H:\OneDrive\A个人\hugo_blog\dev\themes\hugo-theme-stack\layouts	
         homepage:
             - type: search
             - type: archives
