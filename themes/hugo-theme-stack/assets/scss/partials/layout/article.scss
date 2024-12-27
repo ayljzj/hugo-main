@@ -347,6 +347,11 @@
             padding: 0;
             margin: 0;
             width: auto;
+            max-height: 20em;
+       scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+         display: none; /* Chrome Safari */
+       }
         }
     }
 
