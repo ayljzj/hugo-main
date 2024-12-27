@@ -26,7 +26,7 @@ languages:
         weight: 2
         params:
             sidebar:
-                subtitle: 记录个人
+                subtitle: 记录个人生活
 services:
     # Change it to your Disqus shortname before using
     disqus:
@@ -37,6 +37,13 @@ services:
 
 pagination:
     pagerSize: 6
+# 更新时间：优先读取git时间 -> git时间不存在，就读取本地文件修改时间
+frontmatter:
+  lastmod:
+    - :git
+    - :fileModTime
+# 允许获取Git信息		
+enableGitInfo: true
 
 permalinks:
     post: /p/:slug/
@@ -48,7 +55,7 @@ params:
     featuredImageField: image
     rssFullContent: true
     #小图标
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: /favicon.ico
 
     footer:
         since: 2024
