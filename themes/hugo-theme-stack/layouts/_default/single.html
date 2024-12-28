@@ -43,4 +43,10 @@
 
 {{ define "right-sidebar" }}
     {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
-{{ end }}
+    {{ $topImg := resources.Get ("img/top.png") }}
+{{ $topImg := $topImg.Resize "40x" }}
+<a id="back-to-top" href="#">
+    <img src="{{ $topImg.RelPermalink }}" />
+</a>
+
+    {{ end }}
