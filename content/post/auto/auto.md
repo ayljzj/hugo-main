@@ -150,11 +150,11 @@ java -jar mcs_scs.jar CSE problems 0 1 0 1 1 150
 
 ## <span id="jump4">3. 纠错</span>
 ### 错误1：证明器不存在
-<img src="./atuo.assets/error1/error1.png" width="50%" align="center" />
+<img src="./atuo.assets/error1/error1.png" width="50%" align="center" /><br>
 检查dist文件夹下有没有这个cprover_priority
-<img src="./auto.assets/error1/solve1.png" width="50%" align="center" />
+<img src="./auto.assets/error1/solve1.png" width="50%" align="center" /><br>
  若没有那就把cse 改成这个名字，然后再添加可执行权限
- <img src="./auto.assets/error1/solve2.png" width="50%" align="center" />
+ <img src="./auto.assets/error1/solve2.png" width="50%" align="center" /><br>
  ### 错误2：判定异常
  若验证检查结果异常，需记录判定情况，需要记录的有：
 策略：多策略模式下为桌面的strategy文件夹；单策略模式下为strategy.txt文件
@@ -173,4 +173,4 @@ java -jar mcs_scs.jar CSE problems 0 1 0 1 1 150
 在别的电脑上调试也能成功
 **解决方法：**
 重装ubuntu系统
- <img src="./auto.assets/error4/error4.png" width="50%" align="center" />
+ <img src="./auto.assets/error4/error4.png" width="50%" align="center" /><br>
