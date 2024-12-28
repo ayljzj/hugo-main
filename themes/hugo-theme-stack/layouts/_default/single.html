@@ -42,6 +42,7 @@
 {{ end }}
 
 {{ define "right-sidebar" }}
+<<<<<<< HEAD
     {{ if (.Scratch.Get "hasTOC") }}
         <aside class="sidebar right-sidebar sticky">
             <section class="widget archives">
@@ -55,6 +56,13 @@
                 </div>
             </section>
         </aside>
-    {{ end }}
-{{ end }}
+=======
+    {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
+    {{ $topImg := resources.Get ("img/top.png") }}
+{{ $topImg := $topImg.Resize "40x" }}
+<a id="back-to-top" href="#">
+    <img src="{{ $topImg.RelPermalink }}" />
+</a>
 
+>>>>>>> parent of cfb4be5... 测试
+    {{ end }}
