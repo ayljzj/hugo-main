@@ -1,13 +1,12 @@
 ---
 layout: post
-title: 自动推理
+title: 自动推理（环境搭建）
 subtitle: ' "环境搭建与实验"'
 date: 2024-12-26
 author: AYLj
 catalog: true
 categories:
   - 自动推理
-  - 环境
 ---
 
 > “Work. ”
@@ -152,12 +151,15 @@ java -jar mcs_vampire.jar CSE_V problems 0 1 2 1 260 30 1 10
 ```
 
 
-单独测试CSE系统命令：```
+单独测试CSE系统命令：
 ```
 java -jar mcs_scs.jar CSE problems 0 1 0 1 1 150
 ```
-
-## <span id="jump4">3. 纠错</span>
+其中260 20 为时间参数
+如果那两个数值变为300 0，意味着是原始测出来的数据，
+前一个数值代表eprover测的时间，后一个数值代表CSE测的时间，
+300秒减去前两个数值所剩下的时间也是eprover参与的
+## <span id="jump4">4. 纠错</span>
 ### 错误1：证明器不存在
 <img src="./auto.assets/error1/error1.png" width="50%" align="center" /><br>
 检查dist文件夹下有没有这个cprover_priority<br>
