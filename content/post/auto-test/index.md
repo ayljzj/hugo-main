@@ -27,11 +27,12 @@ problems文件夹中存放问题以及Axiom公理集，测试完output中会存�
 使用`./eprover --verson`或`./vampire --verson`查看对应软件的版本<br>
 使用命令行版本测试时，将`cse`替换为自己导出的`cse`<br>
 替换eprover的版本时，要将`eprover`和`mcs_eprover.jar`同时替换才正确。<br>
-3.1版本的Eprover会出现异常，则需要进行以下操作（重新打开一个终端，输入下述指令）：<br>
+3.1以上的版本的Eprover会出现异常，则需要进行以下操作（重新打开一个终端，输入下述指令）：<br>
 ```
 ps -ef|grep eprover
 ```
 然后使用`kill`指令将前三个icdc进程杀死<br>
+拓展(输入./vampire --ignore_missing on --mode casc -t 300 +一个问题的绝对路径，就能得到下面这样的证明搜索路径和时间，这样子只能测单个的原始时间)<br>
 ### 命令行版本测试命令
 测试CSE和Eprover融合系统命令：<br>
 ```
