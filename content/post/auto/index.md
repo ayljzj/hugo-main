@@ -17,12 +17,7 @@ categories:
 [wsl安装教程](https://www.cnblogs.com/stellan/p/14409090.html)
 <br>[安装wsl后虚拟机无法启动](https://blog.csdn.net/m0_74063149/article/details/137725577)
 <br>[原生ubuntu安装教程](https://www.bilibili.com/opus/861067292754051097)<br><br>
-如果想浏览相关的内容，可直接点击下面跳转：<br>
-1.[安装系统](#jump1)<br>
-2.[修改环境](#jump2)<br>
-3.[相关代码修改（基础项）](#jump3)<br>
-4.[纠错](#jump4)<br>
-## <h2 id="jump1">1. 安装系统</h2>
+## 1. 安装系统
 
 ### 步骤1 - 启用适用于 Linux 的 Windows 子系统：
 需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在 Windows 上安装 Linux 分发。
@@ -50,8 +45,7 @@ wsl --set-default-version 2
 ### 步骤5 - 安装所选的 Linux 分发版：
 •	[Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)<br>•	[Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)<br>•	[Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71)<br>•	[openSUSE Leap 15.1](https://www.microsoft.com/store/apps/9NJFZK00FGKV)<br>•	[SUSE Linux Enterprise Server 12 SP5](https://www.microsoft.com/store/apps/9MZ3D1TRP8T1)<br>•	[SUSE Linux Enterprise Server 15 SP1](https://www.microsoft.com/store/apps/9PN498VPMF3Z)<br>•	[Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)<br>•	[Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)<br>•	[Fedora Remix for WSL](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)<br>•	[Pengwin](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)<br>•	[Pengwin Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)<br>•	[Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)<br>
 <img src="./auto.assets/1.png" width="60%" align="center" /><br>
-
-## <div id="jump2">2. 修改环境</div>
+## 2. 修改环境
 
 ### 切换镜像
 修改源：找到 `cd /etc/apt` 路径下的 sources.list 文件对其进行修改<br>在此路径下打开命令行，输入sudo vim sources.list<br>命令行中相关操作命令如下：<br>•	g 光标到头部<br>•	d 删除<br>•	shift + g 全部删除<br>•	i 写入<br>•	粘贴 以下 阿里源 或 清华源<br>•	ESC 退出写入模式<br>•	:wq 保存退出<br>
@@ -114,7 +108,7 @@ sudo apt install python3-pip
 ```
 <br>
 
-## <span id="jump3">3. 相关代码修改（基础项）</span>
+## 3. 相关代码修改（基础项）
 ### 基础代码修改项
 
 | **必改项**           |                                                   |                                                   |
@@ -160,7 +154,7 @@ java -jar mcs_scs.jar CSE problems 0 1 0 1 1 150
 如果那两个数值变为300 0，意味着是原始测出来的数据，
 前一个数值代表eprover测的时间，后一个数值代表CSE测的时间，
 300秒减去前两个数值所剩下的时间也是eprover参与的
-## <span id="jump4">4. 纠错</span>
+## 4. 纠错
 ### 错误1：证明器不存在
 <img src="./auto.assets/error1/error1.png" width="50%" align="center" /><br>
 检查dist文件夹下有没有这个cprover_priority<br>
