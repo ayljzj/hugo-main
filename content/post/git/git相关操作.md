@@ -15,7 +15,7 @@ categories:
 <br>
 git相关指令学习
 
-## <span id="jump1">1. git</span>
+## 1. git基础指令
 
 ~~~
 git add .
