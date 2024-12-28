@@ -13,8 +13,7 @@ categories:
 
 ## 前言
 <br>
-浏览对应的内容，可直接点击下面跳转：<br>
-1.[git](#jump1)<br>
+git相关指令学习
 
 ## <span id="jump1">1. git</span>
 
@@ -27,7 +26,7 @@ git commit -m "测试"
 ~~~
 
 ~~~
-git push
+git push -u origin main
 ~~~
 
 ~~~
