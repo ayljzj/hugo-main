@@ -130,6 +130,13 @@ sudo apt install python3-pip
 | 216               | \#define newTriDebug                              | //#define newTriDebug                             |
 | 755               | //child = fork();<br>    if (0 == 0)              | child = fork();<br>if (child == 0) {              |
 |                   |                                                   | 生成文件                                              |
+文字变元输出<br>
+```
+cout<< QLit->subTerm->ToString()<<endl;//debug输出当前文字项
+cout<<QLit->subTerm->ToStringBind()<<endl;//debug输出当前文字项和变元元替换项
+```
+
+
 ### 命令行版本测试命令
 测试CSE和Eprover融合系统命令：<br>
 ```
