@@ -30,7 +30,8 @@
     <footer class="article-time">
         {{ if $showDate }}
             <div>
-                {{ partial "helper/icon" "date" }}
+                <!--{{ partial "helper/icon" "date" }}-->
+                创建日期:
                 <time class="article-time--published">
                     {{- .Date | time.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
                 </time>
