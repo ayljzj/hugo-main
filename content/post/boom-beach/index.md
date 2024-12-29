@@ -21,8 +21,14 @@ header-img: ./boom-beach.assets/1.png
 
 ----
 ## 相关介绍
-养号：ULGOXKK<br>
-查序列：VZNKMZK<br><br>
+养号：<br>
+```
+ULGOXKK
+```
+查序列：<br>
+```
+VZNKMZK
+```
 [obsidian常用技巧](https://publish.obsidian.md/chinesehelp)，
 [中文论坛](https://forum-zh.obsidian.md/)<br>
 
