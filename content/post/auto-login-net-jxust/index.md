@@ -25,6 +25,7 @@ categories:
 其中，user_account就是学号；user_password就是密码；login_method是运营商信息。里面信息不需要全部保留也可以登录校园网，保留至user_password的结束位置也能登陆。<br>
 - 在搜索栏直接粘贴上文所说的url点击回车，若出现下图的情况即联网成功。<br>
 <img src="./auto-login-net-jxust.assets/login-success.png" width="80%" align="center" /><br>
+
 **原理可行！**<br>
 那我只要每次开机后电脑能自动访问这条url那不就自动登录校园网了吗？<br>
 <big>直接进入实操!</big>
