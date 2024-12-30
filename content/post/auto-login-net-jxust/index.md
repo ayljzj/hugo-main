@@ -20,11 +20,11 @@ categories:
 - 按下 F12 打开浏览器开发者工具（如果没反应那就 fn + F12）<br>
 - 输入账号密码，登录进入校园网<br>
 - 找到这一串请求url，就是通过这一串url就能够成功登录校园网，把这一串复制下来<br>
-<img src="./auto-login-net-jxust.assets/login-success.png" width="70%" align="center" /><br>
+<img src="./auto-login-net-jxust.assets/login.png" width="90%" align="center" /><br>
 `http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=你的校园网账号%%40telecom&user_password=你的校园网密码。`<br>
 其中，user_account就是学号；user_password就是密码；login_method是运营商信息。里面信息不需要全部保留也可以登录校园网，保留至user_password的结束位置也能登陆。<br>
 - 在搜索栏直接粘贴上文所说的url点击回车，若出现下图的情况即联网成功。<br>
-<img src="./auto-login-net-jxust.assets/login.png" width="80%" align="center" /><br>
+<img src="./auto-login-net-jxust.assets/login-success.png" width="80%" align="center" /><br>
 **原理可行！**<br>
 那我只要每次开机后电脑能自动访问这条url那不就自动登录校园网了吗？<br>
 <big>直接进入实操!</big>
