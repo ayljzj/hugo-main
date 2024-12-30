@@ -87,7 +87,7 @@ goto loop
 shell:startup
 ```
 将编写好的.bat脚本复制进去，即可做到开机自动运行。<br>
-<img src="./auto-login-net-jxust.assets/start.png" width="60%" align="center" /><br>
+<img src="./auto-login-net-jxust.assets/start.png" width="50%" align="center" /><br>
 
 
 
