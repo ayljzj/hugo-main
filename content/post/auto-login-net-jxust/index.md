@@ -93,7 +93,9 @@ shell:startup
 <img src="./auto-login-net-jxust.assets/start.png" width="70%" align="center" /><br>
 ## 补充
 有的时候电脑开机后没有自动连接到校园网，自然也无法完成登录请求。<br>
-所以在ping不通网络后增加增加一段操作，使电脑先连接校园网再执行登录操作。<br>
+由于只ping一个站点有时会造成误判，从而反复执行。所以增加一次操作，对baidu.com和qq.com均ping一次，<br>
+只有在两次都ping不通的情况下，才会去执行操作，使电脑先连接校园网再执行登录操作。<br>
+对代码循环执行时间调整为10分钟一次<br>
 本校的校园网名称为“JXUST-WLAN”，所以经过修改后的代码应该这么写：<br>
 
 ```
@@ -109,43 +111,54 @@ set SSID=JXUST-WLAN
 set /a counter+=1
 :: 输出当前是第几次判断
 echo 当前为第 !counter! 次判断。
-:: 检测是否有网络连接（超时 10 秒）
+:: 检测是否有网络连接（ping baidu.com 或 qq.com，超时 10 秒）
 ping -n 1 -w 10000 baidu.com >nul 2>&1
 if errorlevel 1 (
-    echo 无网络连接（ping超时10秒），尝试在浏览器中访问登录页面...
-    :: 指定浏览器路径（假设使用 Chrome）打开指定网址
-    start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=1520193097%%40telecom&user_password=AYLJ0629520zj"
-    echo 登录页面已在浏览器中打开。
-    :: 获取当前连接的 SSID
-    for /f "tokens=2 delims=:" %%i in ('netsh wlan show interfaces ^| findstr /i "SSID"') do (
-        set currentSSID=%%i
-        :: 去除前后空格
-        set currentSSID=!currentSSID: =!
-    )
-    :: 判断是否已经连接到指定的 WLAN 网络
-    if /i "%currentSSID%"=="%SSID%" (
-        echo 已经连接到网络 %SSID%，跳过连接操作。
-    ) else (
-        echo 未连接到指定网络 %SSID%，尝试连接...
-        :: 执行连接操作
-        netsh wlan connect name=%SSID%
+    echo 百度 ping 超时，尝试 ping qq.com...
+    ping -n 1 -w 10000 qq.com >nul 2>&1
+    if errorlevel 1 (
+        echo 无网络连接（百度和qq.com都 ping 超时），尝试在浏览器中访问登录页面...
+        :: 指定浏览器路径（假设使用 Chrome）打开指定网址
+        start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=1520193097%%40telecom&user_password=AYLJ0629520zj"
+        echo 登录页面已在浏览器中打开。
 
-        :: 等待一段时间，确保网络连接
-        timeout /t 10 >nul
-        echo 连接操作完成。
-    )
+        :: 获取当前连接的 SSID
+        for /f "tokens=2 delims=:" %%i in ('netsh wlan show interfaces ^| findstr /i "SSID"') do (
+            set currentSSID=%%i
+            :: 去除前后空格
+            set currentSSID=!currentSSID: =!
+        )
+
+        :: 判断是否已经连接到指定的 WLAN 网络
+        if /i "%currentSSID%"=="%SSID%" (
+            echo 已经连接到网络 %SSID%，跳过连接操作。
+        ) else (
+            echo 未连接到指定网络 %SSID%，尝试连接...
+            :: 执行连接操作
+            netsh wlan connect name=%SSID%
+
+            :: 等待一段时间，确保网络连接
+            timeout /t 10 >nul
+            echo 连接操作完成。
+        )
 start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=1520193097%%40telecom&user_password=AYLJ0629520zj"
+    ) else (
+        echo 网络连接正常（qq.com ping 通），跳过登录操作...
+    )
 ) else (
-    echo 网络连接正常，跳过登录操作...
+    echo 网络连接正常（baidu.com ping 通），跳过登录操作...
 )
-:: 倒计时循环输出（每分钟输出一次）
-for /l %%i in (5,-1,1) do (
+
+:: 倒计时循环输出（每 10 分钟输出一次）
+for /l %%i in (10,-1,1) do (
     set /a minutes=%%i
     echo 倒计时（结束后会检测网络）：!minutes! 分
     timeout /t 60 >nul
 )
+echo 倒计时结束，开始检测网络...
 :: 循环检测
 goto loop
+
 ```
 <br>
 <big>至此，全部完成</big><br>
