@@ -3,8 +3,7 @@ title: 海岛奇兵
 description: 个人攻略
 date: 2024-12-25
 categories:
-  - Boombeach
-  - 手游
+  - Game
 header-img: ./boom-beach.assets/1.png
 ---
 > “A Happy Game. ”
@@ -31,24 +30,25 @@ VZNKMZK
 ```
 [obsidian常用技巧](https://publish.obsidian.md/chinesehelp)，
 [中文论坛](https://forum-zh.obsidian.md/)<br>
-
-龙行天下<br>
-注册手机一加12<br>
-2024年6月<br>
-江西赣州<br>
+小号QQ：
+- 龙行天下<br>
+- 注册手机一加12<br>
+- 2024年6月<br>
+- 江西赣州<br>
 
 ----
 ## 沙滩树教程
-**想种沙滩树要先种压岸树**
+<big><font color=blue>想种沙滩树要先种压岸树！</font></big><br>
+
 ### 1压岸树
 压岸树首先将基地左上角靠山的位置空出来，别的位置用建筑填上，建筑直接的间隔不要留有大于(包括)2×2的位置（防止长树），确保树往左上角长。<br>
-<img src="./boom-beach.assets/沙滩树1.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树1.png" width="70%" align="center" />
 ### 2砍部分树
 当树长的较多的时候，可以将靠近上方的树砍掉，然后用建筑堵住，防止长回去，将树生长的方向挤向岸边。<br>
-<img src="./boom-beach.assets/沙滩树2.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树2.png" width="70%" align="center" />
 
 ### 3挂脚本
 当岸边长满树的时候，或者长较多树的时候，可以尝试开始挂航母脚本，促进沙滩树的生长。<br>
-<img src="./boom-beach.assets/沙滩树3.png" width="50%" align="center" />
+<img src="./boom-beach.assets/沙滩树3.png" width="70%" align="center" />
 
 
