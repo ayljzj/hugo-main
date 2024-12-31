@@ -79,7 +79,7 @@ goto loop
 请检查你自己所获取到的url，在`校园网账号`后面应该会有`%40`字符，由于复制进脚本后，由脚本通过start命令发起访问会将`%40`识别为@，从而导致输进浏览器的url缺失这一关键信息<br>
 若不进行修改就会导致下图的访问结果。<br>
 <img src="./auto-login-net-jxust.assets/login-fail.png" width="70%" align="center" /><br>
-解决方法为在`%40`这个字符前再加一个`%`，这样就能确保url的正确读取并访问。<br>
+<font color=red>解决方法：</font>在`%40`这个字符前再加一个`%`，这样就能确保url的正确读取并访问。<br>
 接下来运行这个.bat文件，就会自动向校园网登录端发送请求，然后登录你的校园网账号，并且每五分钟会ping一次百度的网站。<br>
 若ping不通，则会再次执行登录请求。<br>
 - <big><font color=blue>在运行过程中请不要关闭此命令行窗口！！！</font></big><br>
@@ -119,7 +119,7 @@ if errorlevel 1 (
     if errorlevel 1 (
         echo 无网络连接（百度和qq.com都 ping 超时），尝试在浏览器中访问登录页面...
         :: 指定浏览器路径（假设使用 Chrome）打开指定网址
-        start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=1520193097%%40telecom&user_password=AYLJ0629520zj"
+        start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=你的校园网账号%%40telecom&user_password=你的校园网密码"
         echo 登录页面已在浏览器中打开。
 
         :: 获取当前连接的 SSID
@@ -141,7 +141,7 @@ if errorlevel 1 (
             timeout /t 10 >nul
             echo 连接操作完成。
         )
-start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=1520193097%%40telecom&user_password=AYLJ0629520zj"
+start "" "http://10.17.8.18:801/eportal/portal/login?callback=dr1003&login_method=1&user_account=你的校园网账号%%40telecom&user_password=你的校园网密码"
     ) else (
         echo 网络连接正常（qq.com ping 通），跳过登录操作...
     )
