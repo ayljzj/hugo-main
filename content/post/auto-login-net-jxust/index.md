@@ -163,4 +163,4 @@ goto loop
 <br>
 <big>至此，全部完成</big><br>
 最后实现的效果如下图所示：<br>
-<img src="./auto-login-net-jxust.assets/final.png" width="60%" align="center" /><br>
+<img src="./auto-login-net-jxust.assets/final.png" width="50%" align="center" /><br>
