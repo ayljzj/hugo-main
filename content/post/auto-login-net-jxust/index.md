@@ -28,7 +28,7 @@ categories:
 
 **原理可行！**<br>
 那我只要每次开机后电脑能自动访问这条url那不就自动登录校园网了吗？<br><br>
-<big><font color=blue>直接进入实操!！！</font></big><br>
+<big><font color=blue>直接进入实操！！！</font></big><br>
 
 ---
 ## 2、实际操作
